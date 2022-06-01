@@ -16,7 +16,12 @@ This Lambda also outputs the instances that have Container Insights = False to a
 * log_group_envvar : the name of the CW Log Group to output the log stream
 
 ### Example output
-
+```
+ClusterName,ClusterStatus,ClusterPerformanceInsightsStatus
+abc-ui-dev,ACTIVE,disabled
+abc-api-dev,ACTIVE,disabled
+def-cft,ACTIVE,disabled
+```
 
 ### Triggers
 This lambda can be run standalone or via a trigger eg daily via an EventBridge rule eg rate(1 day)
